@@ -127,7 +127,7 @@ const emailTemplate = (secretLoginCode) => {
                         padding: 20px 0 30px 0;
                       "
                     >
-                      <p style="margin: 0">Here is your sign in code : <strong>${secretLoginCode}</strong></p><br /><br />
+                      <p style="margin: 0">Here is your sign in code : <br /><strong>${secretLoginCode}</strong></p>
                     </td>
                   </tr>
                 </table>
