@@ -150,7 +150,7 @@ const emailTemplate = (secretLoginCode) => {
                         font-size: 14px;
                       "
                     >
-                      <p style="margin: 0">From <a style="color:#ffffff" href="https://atlis.dev" target="blank">atlis.dev</a> <br /></p>
+                      <p style="margin: 0"><strong>From <a style="color:#ffffff" href="https://atlis.dev" target="blank">atlis.dev</a><br /></strong></p>
                     </td>
                     <td align="right">
                       <table
