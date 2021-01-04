@@ -1,0 +1,54 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: atlis-nairobi
+# app and org for use with dashboard.serverless.com
+app: atlis-nairobi
+org: atlis
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  iamRoleStatements:
+      - Effect: Allow
+        Action:
+            - ses:*
+        Resource: '*'
+  environment:
+        SENDGRID_API_KEY: ${self:custom.apikey}
+        SENDGRID_FROM_ADDRESS: ${self:custom.address}
+        SENDGRID_FROM_NAME: ${self:custom.name}
+
+custom:
+    apikey: "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"
+    address: "chris@atlis.dev"
+    name: "Chris @ Atlis"
+
+functions:
+  PreSignup:
+      handler: triggers/preSignUp.handler
+  DefineAuthChallenge:
+      handler: triggers/defineAuthChallenge.handler
+  VerifyAuthChallenge:
+      handler: triggers/verifyAuthChallenge.handler
+  CreateAuthChallenge:
+      handler: triggers/createAuthChallenge.handler
+  GetUser:
+      handler: lambdas/getUser.handler
+      events:
+        - http: GET GetUser
+          cors: true
