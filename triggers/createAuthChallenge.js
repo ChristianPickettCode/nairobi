@@ -124,10 +124,10 @@ const emailTemplate = (secretLoginCode) => {
                         font-family: Arial, sans-serif;
                         font-size: 16px;
                         line-height: 24px;
-                        padding: 20px 0 30px 0;
+                        padding: 20px 0 20px 0;
                       "
                     >
-                      <p style="margin: 0">Here is your sign in code : <br /><strong>${secretLoginCode}</strong></p>
+                      <p style="margin: 0">Here is your sign in code : <br /><br /><strong>${secretLoginCode}</strong></p>
                     </td>
                   </tr>
                 </table>
