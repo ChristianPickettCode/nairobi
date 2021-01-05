@@ -36,7 +36,7 @@ provider:
 custom:
     apikey: "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"
     address: "chris@atlis.dev"
-    name: "Chris @ Atlis"
+    name: "Chris from Atlis.dev"
 
 functions:
   PreSignup:
