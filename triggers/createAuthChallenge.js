@@ -127,6 +127,7 @@ const emailTemplate = (secretLoginCode) => {
                         padding: 20px 0 20px 0;
                       "
                     >
+                      <h2>Atlis.</h2>
                       <p style="margin: 0">Here is your sign in code : <br /><br /><strong>${secretLoginCode}</strong></p>
                     </td>
                   </tr>
